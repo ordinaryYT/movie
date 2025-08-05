@@ -1,21 +1,18 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "jsx": "react-jsx",
     "module": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "jsx": "react-jsx",
     "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "strict": true,
     "esModuleInterop": true,
+    "strict": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",                     // 👈 Required for `paths` to work
+    "noEmit": true,
+    "baseUrl": ".",                    // 👈 Required for alias
     "paths": {
-      "@/*": ["src/*"]                  // 👈 This makes `@/components/...` work
+      "@/*": ["*"]                     // 👈 THIS tells TypeScript to treat @/ as root
     }
   },
-  "include": ["src"]
+  "include": ["*"]
 }
