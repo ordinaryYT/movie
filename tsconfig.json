@@ -11,7 +11,11 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",                     // 👈 Required for `paths` to work
+    "paths": {
+      "@/*": ["src/*"]                  // 👈 This makes `@/components/...` work
+    }
   },
-  "include": ["./"]
+  "include": ["src"]
 }
